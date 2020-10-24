@@ -18,6 +18,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/Xh-oWqg9k/Tree.svg
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
+| allowDrop | 是否允许拖拽时放置在该节点 | ({ dropNode, dropPosition }) => boolean | - |
 | autoExpandParent | 是否自动展开父节点 | boolean | false |  |
 | blockNode | 是否节点占据一行 | boolean | false |  |
 | checkable | 节点前添加 Checkbox 复选框 | boolean | false |  |
@@ -30,6 +31,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/Xh-oWqg9k/Tree.svg
 | defaultSelectedKeys | 默认选中的树节点 | string\[] | \[] |  |
 | disabled | 将树禁用 | boolean | false |  |
 | draggable | 设置节点可拖拽（IE>8） | boolean | false |  |
+| dropIndicatorRender | 拖拽时拖拽悬浮于的节点的内部标示节点 | ({ dropPosition, dropLevelOffset, indent: number, prefixCls }) => ReactNode| - |
 | expandedKeys | （受控）展开指定的树节点 | string\[] | \[] |  |
 | filterTreeNode | 按需筛选树节点（高亮），返回 true | function(node) | - |  |
 | height | 设置虚拟滚动容器高度，设置后内部节点不再支持横向滚动 | number | - |  |
