@@ -20,7 +20,11 @@
 
 .drop-indicator() {
   .@{tree-prefix-cls}-drop-indicator {
+    position: absolute;
+    right: 0;
+    height: 2px;
     background-color: @primary-color;
+    pointer-events: none;
     &::after {
       position: absolute;
       top: -3px;
@@ -180,7 +184,7 @@
     background: transparent;
     border-radius: @border-radius-base;
     cursor: pointer;
-    transition: all 0.3s, border 0s, line-height 0s;
+    transition: all 0.3s, border 0, line-height 0, box-shadow 0;
 
     &:hover {
       background-color: @tree-node-hover-bg;
@@ -210,6 +214,12 @@
     user-select: none;
 
     .drop-indicator();
+  }
+
+  .@{custom-tree-node-prefix-cls}.drop-container {
+    > [draggable] {
+      box-shadow: 0 0 0 2px @primary-color;
+    }
   }
 
   // ==================== Show Line =====================
