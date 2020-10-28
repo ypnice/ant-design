@@ -134,12 +134,6 @@ export interface TreeProps extends Omit<RcTreeProps, 'prefixCls' | 'showLine' | 
   prefixCls?: string;
   children?: React.ReactNode;
   blockNode?: boolean;
-  dropIndicatorRender?: (props: {
-    dropPosition: -1 | 0 | 1;
-    dropLevelOffset: number;
-    indent: number;
-    prefixCls: string;
-  }) => React.ReactNode;
 }
 
 interface CompoundedComponent
@@ -164,7 +158,7 @@ const Tree = React.forwardRef<RcTree, TreeProps>((props, ref) => {
   const newProps = {
     ...props,
     showLine: Boolean(showLine),
-    dropIndicatorRender: props.dropIndicatorRender || dropIndicatorRender,
+    dropIndicatorRender,
   };
   return (
     <RcTree

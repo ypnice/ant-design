@@ -30,7 +30,6 @@ Almost anything can be represented in a tree structure. Examples include directo
 | defaultSelectedKeys | Specifies the keys of the default selected treeNodes | string\[] | \[] |  |
 | disabled | Whether disabled the tree | boolean | false |  |
 | draggable | Specifies whether this Tree is draggable (IE > 8) | boolean | false |  |
-| dropIndicatorRender | The indicator of the node to render when dragging over it | ({ dropPosition, dropLevelOffset, indent: number, prefixCls }) => ReactNode| - |
 | expandedKeys | (Controlled) Specifies the keys of the expanded treeNodes | string\[] | \[] |  |
 | filterTreeNode | Defines a function to filter (highlight) treeNodes. When the function returns `true`, the corresponding treeNode will be highlighted | function(node) | - |  |
 | height | Config virtual scroll height. Will not support horizontal scroll when enable this | number | - |  |
