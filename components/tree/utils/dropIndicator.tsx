@@ -16,13 +16,13 @@ export default function dropIndicatorRender(props: {
   };
   switch (dropPosition) {
     case -1:
-      style.top = 0;
+      style.top = -3;
       break;
     case 1:
-      style.bottom = 0;
+      style.bottom = -3;
       break;
     case 0:
-      style.bottom = 0;
+      style.bottom = -3;
       style[startPosition] = indent - 10;
       break;
     default:
